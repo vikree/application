@@ -8,3 +8,4 @@ jobs:
     with:
       tags: user/containerRepository:latest
       build-args: CUSTOM_BUILD_ARG=value
+      
