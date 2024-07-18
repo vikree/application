@@ -1,4 +1,4 @@
-name: Main Workflow
+name: Application Workflow
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - uses: vikree/custom-actions-repo/templates@main
+    - uses: vikree/custom-actions-repo/templates/action.yaml@main
       with:
-       tags: user/containerRepository:latest
-       build-args: CUSTOM_BUILD_ARG=value
+       tags: my-docker-image:latest
+       build-args: ARG1=value1,ARG2=value2
