@@ -5,13 +5,7 @@ on:
 
 jobs:
   call-action-file:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
-      - name: Call Reusable Workflow
-        uses: vikree/custom-actions-repo/.github/workflows/action.yaml@main
-        with:
-          tags: my-docker-image:latest
-          build-args: ARG1=value1,ARG2=value2
+    uses: vikree/custom-actions-repo/.github/workflows/action.yaml@main
+    with:
+      tags: my-docker-image:latest
+      build-args: ARG1=value1,ARG2=value2
