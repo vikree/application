@@ -4,11 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v3
-    - uses: vikree/custom-actions-repo/templates/action.yaml@main
-      with:
-       tags: my-docker-image:latest
-       build-args: ARG1=value1,ARG2=value2
+  call-action-file:
+    uses: vikree/custom-actions-repo/templates/action-file.yml@main
+    with:
+      tags: my-docker-image:latest
+      build-args: ARG1=value1,ARG2=value2
