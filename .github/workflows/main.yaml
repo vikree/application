@@ -4,9 +4,11 @@ on:
   workflow_dispatch:
 
 jobs:
-
-      uses: vikree/custom-actions-repo/templates/generic-CI.yaml@main    
-       with:
-          tags: user/containerRepository:latest
-          build-args: CUSTOM_BUILD_ARG=value
-      
+  build:
+    runs-on: ubuntu
+    steps:
+    - uses: actions/checkout@v3
+    - uses: vikree/custom-actions-repo/templates/generic-CI.yaml@main
+      with:
+       tags: user/containerRepository:latest
+       build-args: CUSTOM_BUILD_ARG=value
