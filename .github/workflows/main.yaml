@@ -5,7 +5,7 @@ on:
 
 jobs:
   call-action-file:
-    uses: custom-actions-repo/.github/workflows/action.yaml@main
+    uses: vikree/custom-actions-repo/.github/workflows/action.yaml@main
     with:
       tags: my-docker-image:latest
       build-args: ARG1=value1,ARG2=value2
