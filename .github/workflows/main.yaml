@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-generic-ci:
-    uses: vikree/custom-actions-repo/template/generic-CI.yaml@main
-    with:
-      tags: user/containerRepository:latest
-      build-args: CUSTOM_BUILD_ARG=value
+
+      uses: vikree/custom-actions-repo/templates/generic-CI.yaml@main    
+       with:
+          tags: user/containerRepository:latest
+          build-args: CUSTOM_BUILD_ARG=value
       
