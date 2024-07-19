@@ -15,3 +15,10 @@ jobs:
           Dockerfile: ${{ github.workspace }}/Dockerfile
           build-args: ARG1=value1,ARG2=value2
           secrets: inherit
+    - name: Use Reusable Workflow
+      uses: vikrees/custom-actions-repo/push@main
+      with:
+          tags: my-docker-image:latest
+          Dockerfile: ${{ github.workspace }}/Dockerfile
+          build-args: ARG1=value1,ARG2=value2
+          secrets: inherit
