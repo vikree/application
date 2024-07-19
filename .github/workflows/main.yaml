@@ -13,6 +13,6 @@ jobs:
       with:
          Dockerfile: ./Dockerfile
          build-args: ARG1=value1,ARG2=value2
-         tags: my-docker-image:latest
+         #tags: my-docker-image:latest
          secrets: inherit
          
