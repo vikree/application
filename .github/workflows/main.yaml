@@ -16,5 +16,6 @@ jobs:
     uses: vikrees/custom-actions-repo/.github/workflows/generic-ci.yaml@main
     with:
       tags: my-docker-image:latest
+      Dockerfile: ${{ github.workspace }}/Dockerfile
       build-args: ARG1=value1,ARG2=value2
     secrets: inherit
