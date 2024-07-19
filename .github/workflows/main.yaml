@@ -4,13 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-and-list:
+  build-and-push:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Reusable Workflow
-        uses: vikrees/custom-actions-repo/templates@main
-        with:
+    - uses: actions/checkout@v3
+    - name: Use Reusable Workflow
+      uses: vikrees/custom-actions-repo/templates@main
+      with:
           tags: my-docker-image:latest
           Dockerfile: ./Dockerfile
           build-args: ARG1=value1,ARG2=value2
+          secrets: inherit
