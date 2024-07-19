@@ -21,7 +21,7 @@ jobs:
           path: ${{ github.workspace }}
 
       - name: Use Reusable Workflow
-        uses: ./custom-actions/.github/workflows/generic-ci.yaml
+        uses: vikrees/custom-actions-repo/.github/workflows/generic-ci.yaml@main
         with:
           tags: my-docker-image:latest
           build-args: ARG1=value1,ARG2=value2
