@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           repository: vikree/application
-          path: custom-actions
+          path: ${{ github.workspace }}
 
       - name: Use Reusable Workflow
         uses: ./custom-actions/.github/workflows/generic-ci.yaml
