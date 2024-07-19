@@ -19,3 +19,5 @@ jobs:
           Dockerfile: ./Dockerfile
           build-args: ARG1=value1,ARG2=value2
           secrets: inherit
+          docker_pat: ${{ secrets.DOCKER_PAT }}
+          docker_username: ${{ secrets.DOCKER_USERNAME }}
