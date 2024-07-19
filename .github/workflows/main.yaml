@@ -4,8 +4,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  call-action-file:
-    uses: vikree/custom-actions-repo/.github/workflows/action.yaml@main
+  caller:
+    uses: vikrees/custom-actions-repo/.github/workflows/templates/generic-ci.yaml@main
     with:
       tags: my-docker-image:latest
       build-args: ARG1=value1,ARG2=value2
