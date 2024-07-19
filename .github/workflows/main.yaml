@@ -4,7 +4,9 @@ on:
   workflow_dispatch:
 
 jobs:
-  caller:
+  job1:
+    uses: actions/checkout@v2
+  job2:
     uses: vikrees/custom-actions-repo/.github/workflows/generic-ci.yaml@main
     with:
       tags: my-docker-image:latest
