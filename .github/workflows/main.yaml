@@ -17,7 +17,7 @@ jobs:
       - name: Checkout Custom Actions Repo
         uses: actions/checkout@v2
         with:
-          repository: vikrees/custom-actions-repo
+          repository: vikree/application
           path: custom-actions
 
       - name: Use Reusable Workflow
