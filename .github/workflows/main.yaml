@@ -7,22 +7,11 @@ jobs:
   build-and-list:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout application Repo
-        uses: actions/checkout@v2
-        with:
-          repository: vikree/application
-          path: ${{ github.workspace }}
-
-      - name: List Workspace Content
-        run: ls -la ${{ github.workspace }}
-        
-      - name: Use Reusable Workflow
-        uses: vikrees/custom-actions-repo/.github/workflows/generic-ci.yaml@main
-        with:
+    - uses: actions/checkout@v3
+    - name: Use Reusable Workflow
+      uses: vikrees/custom-actions-repo/build@main
+      with:
           tags: my-docker-image:latest
           Dockerfile: ${{ github.workspace }}/Dockerfile
           build-args: ARG1=value1,ARG2=value2
           secrets: inherit
-          
-      - name: List Workspace Content
-        run: ls -la ${{ github.workspace }}
