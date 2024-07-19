@@ -16,4 +16,4 @@ jobs:
     with:
       tags: my-docker-image:latest
       build-args: ARG1=value1,ARG2=value2
-      secrets: inherit
+    secrets: inherit
