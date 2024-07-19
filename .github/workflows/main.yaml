@@ -6,11 +6,8 @@ on:
 jobs:
   checkout-repo:
     runs-on: ubuntu-latest
-    outputs:
-      repo-path: ${{ steps.checkout.outputs.path }}
     steps:
       - name: Checkout Repository
-        id: checkout
         uses: actions/checkout@v4
 
   job1:
