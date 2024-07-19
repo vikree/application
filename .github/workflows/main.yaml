@@ -9,7 +9,8 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
-
+      - name: List Application Directory Content
+        run: ls -la ${{ github.workspace }}/application
   job1:
     needs: checkout-repo
     uses: vikrees/custom-actions-repo/.github/workflows/generic-ci.yaml@main
