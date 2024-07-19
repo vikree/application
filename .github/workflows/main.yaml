@@ -7,12 +7,10 @@ jobs:
   build-and-list:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Reusable Workflow
-      uses: vikrees/custom-actions-repo/templates@main
-      with:
-         Dockerfile: ./Dockerfile
-         build-args: ARG1=value1,ARG2=value2
-         #tags: my-docker-image:latest
-         secrets: inherit
-         
+      - uses: actions/checkout@v3
+      - name: Use Reusable Workflow
+        uses: vikrees/custom-actions-repo/template@main
+        with:
+          tags: my-docker-image:latest
+          Dockerfile: ./Dockerfile
+          build-args: ARG1=value1,ARG2=value2
