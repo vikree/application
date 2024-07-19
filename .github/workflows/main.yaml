@@ -7,15 +7,6 @@ jobs:
   build-and-list:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Custom Actions Repo
-        uses: actions/checkout@v2
-        with:
-          repository: vikrees/custom-actions-repo
-          path: ${{ github.workspace }}
-          
-      - name: List Workspace Content
-        run: ls -la ${{ github.workspace }}
-          
       - name: Checkout application Repo
         uses: actions/checkout@v2
         with:
