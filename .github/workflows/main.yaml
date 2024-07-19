@@ -13,9 +13,6 @@ jobs:
       - name: List Workspace Content
         run: ls -la ${{ github.workspace }}
 
-      - name: List Application Directory Content
-        run: ls -la ${{ github.workspace }}/application
-
       - name: Checkout Custom Actions Repo
         uses: actions/checkout@v2
         with:
