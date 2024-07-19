@@ -17,11 +17,11 @@ jobs:
       - name: Checkout Custom Actions Repo
         uses: actions/checkout@v2
         with:
-          repository: vikree/application
-          path: ${{ github.workspace }}
+          repository: vikrees/custom-actions-repo
+          path: custom-actions
 
       - name: Use Reusable Workflow
-        uses: vikrees/custom-actions-repo/.github/workflows/generic-ci.yaml@main
+        uses: ./custom-actions/.github/workflows/generic-ci.yaml
         with:
           tags: my-docker-image:latest
           build-args: ARG1=value1,ARG2=value2
