@@ -12,6 +12,6 @@ jobs:
       uses: vikrees/custom-actions-repo/templates@main
       with:
           tags: my-docker-image:latest
-          Dockerfile: ${{ github.workspace }}/Dockerfile
+          Dockerfile: ./Dockerfile
           build-args: ARG1=value1,ARG2=value2
           secrets: inherit
