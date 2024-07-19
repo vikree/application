@@ -7,17 +7,14 @@ jobs:
   build-and-list:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v4
-
-      - name: List Workspace Content
-        run: ls -la ${{ github.workspace }}
-
       - name: Checkout Custom Actions Repo
         uses: actions/checkout@v2
         with:
           repository: vikrees/custom-actions-repo
           path: ${{ github.workspace }}
+          
+      - name: List Workspace Content
+        run: ls -la ${{ github.workspace }}
           
       - name: Checkout application Repo
         uses: actions/checkout@v2
@@ -35,3 +32,6 @@ jobs:
           Dockerfile: ${{ github.workspace }}/Dockerfile
           build-args: ARG1=value1,ARG2=value2
           secrets: inherit
+          
+      - name: List Workspace Content
+        run: ls -la ${{ github.workspace }}
