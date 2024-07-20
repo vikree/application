@@ -1,6 +1,4 @@
-
-name: Application Workflow - Prod
-
+name: Application Workflow - Development
 
 on:
   workflow_dispatch:
@@ -23,5 +21,3 @@ jobs:
           secrets: inherit
           password: ${{ secrets.DOCKER_PAT }}
           username: ${{ secrets.DOCKER_USERNAME }}
-
-          
