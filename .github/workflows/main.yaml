@@ -1,4 +1,4 @@
-name: Application Workflow - proad
+name: Application Workflow - prod
 
 on:
   workflow_dispatch:
