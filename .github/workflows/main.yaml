@@ -13,7 +13,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Use Reusable Workflow
-      uses: vikrees/custom-actions-repo/templates@main
+      uses: vikrees/custom-actions-repo/templates/action.yml@main
       with:
           tags: vikree/my-docker-image:latest
           Dockerfile: ./Dockerfile
