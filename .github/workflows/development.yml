@@ -1,7 +1,9 @@
-name: Application Workflow - Development
+name: Application Workflow - Development - branch
 
 on:
   workflow_dispatch:
+     branches:
+       - development
 
 permissions:
   contents: read
